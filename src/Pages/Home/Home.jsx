@@ -12,7 +12,7 @@ const Home = () => {
       <Navbar />
       <div className="homeBody">
         <AdSection />
-    { err? <span style={{color:"red"}}>The site is being updated..  </span> :  <>
+    { err? <span style={{color:"red",fontSize:"20px",display:"flex",justifyContent:"center",textAlign:"center",width:"100%",height:"5rem"}}>The website is being updated...  </span> :  <>
     
         <FeaturedPosts />
         <TopStories location="home" />
