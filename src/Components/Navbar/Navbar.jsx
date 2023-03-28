@@ -12,7 +12,7 @@ const Navbar = () => {
 
 
 
-  
+  //about //contacts
  
   return (
     <div className='navBar'>
@@ -30,10 +30,11 @@ const Navbar = () => {
           <Link to="/" className='links'>
                   <li className="item">Home</li>
           </Link>
-          <Link to="/about" className='links'>
+
+          <Link to="/" className='links'>
                   <li className="item">About</li>
           </Link>
-          <Link to="/contacts" className='links'>
+          <Link to="/" className='links'>
                   <li className="item">Contacts</li>
           </Link>
           {
