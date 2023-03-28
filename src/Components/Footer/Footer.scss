@@ -1,0 +1,178 @@
+.footerContainer{
+     display: flex;
+     flex-direction: column;
+    .footerInfo{
+    display: flex;
+    background-color: black;
+    color: white;
+    height: 35vh;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 7rem;
+    .leftSide{
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        .aboutList{
+            list-style:none;
+            & li{
+                display: flex;
+                align-items: center;
+                .arrPng{
+                    font-size: 12px;
+                }
+            }
+            & li:hover{
+                cursor: pointer;
+                text-decoration: underline; 
+            }
+        
+        }
+       
+    }
+    .center{
+        flex: 2;
+        margin-top: -2.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        .socialMedLinks{
+            list-style:none;
+            & li{
+                display: flex;
+                align-items: center;
+                
+                gap: 3px;
+                .socIcon{
+                    font-size: 12px;
+                }
+            }
+             & li:hover{
+                cursor: pointer;
+                text-decoration: underline; 
+            }
+        }
+
+    }
+    .rightSide{
+        flex: 1;
+        & div{
+            font-size: 30px;
+            font-weight: 700;
+            padding: 0;
+            cursor: pointer;
+        }
+    }
+
+}
+.copRight{
+    display: flex;
+    padding: 0.5rem 7rem;
+    justify-content: center;
+    align-items: center;
+    font-size:12px;
+    font-weight: 400;
+    .copIcon{
+        font-size: 25px;
+    }
+}
+    }
+
+ @media only screen and (max-width:600px){
+.footerContainer{
+     display: flex;
+     flex-direction: column;
+     width: 100%;
+    .footerInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    background-color: black;
+    color: white;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1rem;
+    .leftSide{
+        display: flex;
+        flex-direction: column;
+        
+        width: 100%;
+        & h1{
+            font-size: 20px;
+        }
+        .aboutList{
+            list-style:none;
+            & li{
+                display: flex;
+                font-size: 16px;
+                align-items: center;
+                .arrPng{
+                    font-size: 12px;
+                }
+            }
+            & li:hover{
+                cursor: pointer;
+                text-decoration: underline; 
+            }
+        
+        }
+       
+    }
+    .center{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        
+        & h1{
+            font-size: 20px;
+
+        }
+        .socialMedLinks{
+            list-style:none;
+            & li{
+                display: flex;
+                align-items: center;
+                font-size: 16px;
+                gap: 3px;
+                .socIcon{
+                    font-size: 12px;
+                }
+            }
+             & li:hover{
+                cursor: pointer;
+                text-decoration: underline; 
+            }
+        }
+
+    }
+    .rightSide{
+        width: 100%;
+        margin-top: -2rem;
+        & div{
+            
+            font-size: 25px;
+            font-weight: 700;
+            padding: 0;
+            cursor: pointer;
+        }
+    }
+
+}
+.copRight{
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size:8px;
+    font-weight: 400;
+    .copIcon{
+        font-size: 8px;
+    }
+}
+    }
+ }   

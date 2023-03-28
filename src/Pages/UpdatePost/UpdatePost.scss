@@ -1,0 +1,73 @@
+.updatePostContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    .postCard{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 0rem 7rem;
+        color: var(--mainTextColor);
+        font-weight: 500;
+
+        .postForm{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            width: 100%;
+             
+           & div{
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            & label{
+                font-size: 20px;
+            }
+            & input{
+                 color: var(--mainTextColor);
+                 font-weight: 600;
+                 font-size: 17px;
+                 outline: none;
+                 padding: 8px;
+                 border: 1px solid grey;
+                 border-radius: 5px;
+            }
+            & textarea{
+                min-height: 70vh;
+                padding: 25px;
+                 color:var(--mainTextColor);
+                 font-size: 24px;
+                 word-spacing: 3px;
+                 outline: none;
+                 line-height: 1.4;
+                 & ::first-letter{
+                        text-transform: capitalize;
+                        font-size: 20px;
+                    }
+            }
+           }
+           .btnUpdate{
+            display: flex;
+            align-self: center;
+            padding: 10px;
+            background: teal;
+            color: white;
+            margin-top: 5px;
+            border: none;
+            border-radius: 5px;
+            
+           }
+           .btnUpdate:hover{
+            cursor: pointer;
+            background-color: rgb(7, 105, 105);
+
+            }
+            .btnUpdate:disabled{
+                cursor:not-allowed;
+                pointer-events: none;
+            }
+        
+    }
+    }
+}

@@ -1,0 +1,42 @@
+import React, { useEffect, useState } from 'react'
+import "./TopStories.scss";
+//import { TopStoriesData } from '../Data/TopStories';
+import TopStory from '../Components/TopStory/TopStory.jsx';
+import { getAllPosts } from '../ApiRequests/PostRequests';
+import LoadingIcon from '../Components/LoadingIcon/LoadingIcon';
+const TopStories = ({location}) => {
+       const [trendingPosts, setTrendingPosts] = useState([]);
+  const [fetching, setFetching] = useState(false);
+  
+  //==================fetch all trending posts from db ====================================
+    useEffect(() =>{
+      const loadTrendingPosts = async () => {
+          setTimeout(setFetching(true),30);
+        const res = await getAllPosts();
+        setTrendingPosts(res.data.filter((p => p.category?.toLowerCase() === "trending")));
+        setFetching(false);
+            
+        }
+        loadTrendingPosts();
+    },[]);
+  //========================================================================================  
+  return (
+
+    <div className='topStoriesContainer'>
+      { 
+        fetching? <LoadingIcon /> : (<>
+
+<h1>{location === "home"?"Trending":"Related"}</h1>
+          <div className='storiesContainer'>
+        {trendingPosts.map(story =>
+            <TopStory key={story._id} postDat={story} />
+            )}
+          </div>
+            </>
+          )
+          }
+    </div>
+  )
+}
+
+export default TopStories
