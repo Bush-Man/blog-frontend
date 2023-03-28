@@ -1,7 +1,7 @@
 import axios from "axios";
 
 
-const API = axios.create({ baseUrl: "http://localhost:5000" });
+const API = axios.create({ baseUrl: "https://blogwebsiteapitry.onrender.com" });
 export const login = async (data,dispatch) => {
     dispatch({ type: "AUTH_START" });
     try {
