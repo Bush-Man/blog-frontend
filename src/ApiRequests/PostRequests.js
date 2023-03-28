@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = axios.create({ baseUrl: "http://localhost:5000" });
+const API = axios.create({ baseUrl: "https://blogwebsiteapitry.onrender.com" });
 
 //delete a post
 export const deletePost = async (postId) => {
