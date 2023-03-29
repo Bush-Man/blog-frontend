@@ -6,7 +6,7 @@ import TopStories from '../../TopStories/TopStories.jsx';
 import Footer from '../../Components/Footer/Footer.jsx';
 import Navbar from '../../Components/Navbar/Navbar';
 const Home = () => {
-  const err = true;
+  const err = false;
   return (
       <div className='home'>
       <Navbar />
