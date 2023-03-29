@@ -1,11 +1,11 @@
 import axios from "axios";
 
-const API = axios.create({ baseUrl: "https://blogwebsiteapitry.onrender.com" });
+//const API = axios.create({ baseUrl: "https://blogwebsiteapitry.onrender.com" });
 
 //delete a post
 export const deletePost = async (postId) => {
     try {
-        API.delete("/post/" + postId);
+        axios.delete("https://blogwebsiteapitry.onrender.com/post/" + postId);
         
     } catch (err) {
         throw (err);
@@ -15,7 +15,7 @@ export const deletePost = async (postId) => {
 export const updatePostById = async (postId, data) => {
     try {
         
-     const res = await API.put(`/post/${postId}`, data);
+     const res = await axios.put(`https://blogwebsiteapitry.onrender.com/post/${postId}`, data);
         return res;
     } catch (err) {
         throw (err);
@@ -27,7 +27,7 @@ export const updatePostById = async (postId, data) => {
 export const getPost = async (postId) => {
      
     try {       
-        const res = await API.get("/post/" + postId);
+        const res = await axios.get("https://blogwebsiteapitry.onrender.com/post/" + postId);
         return res;
   } catch (err) {
         throw (err);
@@ -36,7 +36,7 @@ export const getPost = async (postId) => {
 //get All Posts
 export const getAllPosts = async () => {
     try {
-        const res = await API.get("/post/");
+        const res = await axios.get("https://blogwebsiteapitry.onrender.com/post/");
         return res;
     } catch (err) {
         throw(err)
@@ -45,7 +45,7 @@ export const getAllPosts = async () => {
 //create post
 export const createNewPost = async (data) => {
     try {
-      await API.post("/post/", data);      
+      await axios.post("https://blogwebsiteapitry.onrender.com/post/", data);      
      
     } catch (error) {
         throw (error);
