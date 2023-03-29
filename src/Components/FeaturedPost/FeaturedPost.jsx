@@ -2,28 +2,21 @@
 import "./FeaturedPost.scss";
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import { Link } from 'react-router-dom';
-import LoadingIcon from "../LoadingIcon/LoadingIcon";
+//import LoadingIcon from "../LoadingIcon/LoadingIcon";
 import dateFormat from "dateformat";
 import { useEffect, useState } from "react";
-const FeaturedPost = ({ post, fetching }) => {
+const FeaturedPost = ({ post}) => {
     
 
-//==============image loading function============
-    const [loading, setLoading] = useState(false);
-    useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 3000);
-  }, []);
 
     
     return (
-         fetching? <LoadingIcon /> : (
+         
         
         <div className='ftPostCard'>
                 <Link to={`/post/${post._id}`} className="links">
                     <div className="leftSide">
-                    <img src={loading? <LoadingIcon /> : post.image.url} alt="" />
+                    <img src={ post.image.url} alt="" />
                     </div>
                     <div className="rightSide">
                         <h3>{post.title}</h3>
@@ -45,7 +38,7 @@ const FeaturedPost = ({ post, fetching }) => {
                     </Link>
                     
                     
-        </div>)
+        </div>
                 
                     )
                     
