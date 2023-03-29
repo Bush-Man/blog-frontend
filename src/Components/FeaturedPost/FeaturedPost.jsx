@@ -16,7 +16,7 @@ const FeaturedPost = ({ post}) => {
         <div className='ftPostCard'>
                 <Link to={`/post/${post._id}`} className="links">
                     <div className="leftSide">
-                    <img src={ post.image.url} alt="" />
+                    <img src={ post?.image?.url} alt="" />
                     </div>
                     <div className="rightSide">
                         <h3>{post.title}</h3>
