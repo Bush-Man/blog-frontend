@@ -32,7 +32,7 @@ const FeaturedPosts = () => {
           
           <div className="postsContainer">
         {featuredPosts.map(p => 
-        <FeaturedPost key={p._id} post={p} fetching ={fetching}/>
+        <FeaturedPost key={p._id} post={p}/>
         )}
       </div>
     </>
