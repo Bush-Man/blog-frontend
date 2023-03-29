@@ -1,12 +1,12 @@
 import axios from "axios";
 
 
-const API = axios.create({ baseUrl: "https://blogwebsiteapitry.onrender.com" });
+//const API = axios.create({ baseUrl: "" });
 export const login = async (data,dispatch) => {
     dispatch({ type: "AUTH_START" });
     try {
         ///Forgetting this part sometimes
-        const res = await API.post("/auth/login/", data);
+        const res = await axios.post("https://blogwebsiteapitry.onrender.com/auth/login/", data);
         dispatch({
             type: "AUTH_SUCCESS",
             payload:res.data
