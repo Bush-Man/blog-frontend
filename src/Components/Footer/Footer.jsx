@@ -63,7 +63,7 @@ const Footer = () => {
           </div>
           <div className="rightSide">
               <div className="logo">
-              Blog Title
+              DEVELOPERSPOOL
             </div>
               </div>
               
